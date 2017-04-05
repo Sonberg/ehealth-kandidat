@@ -1,0 +1,48 @@
+
+  <div class="card-content" style= {{style}}>
+    {{#if block}}
+      {{yield}}
+    {{else}}
+      <div class="content {{if (eq item.background false) 'no-background'}}">
+        {{#if (and (not item.floatText) item.image)}}
+          <img src= {{if item.image item.image '../../assets/images/rehab.png'}} class="image" alt="">
+        {{/if}}
+
+        {{#if item.title}}
+          <h3>{{item.title}}</h3>
+        {{/if}}
+
+        {{#if item.floatText}}
+          <div class="float flex flex-column">
+            {{item.floatText}}
+            <div class="sub">
+              {{item.floatDesc}}
+            </div>
+          </div>
+        {{/if}}
+      </div>
+      {{#if (or item.text item.sections)}}
+        <div class="text row">
+          {{#if item.text}}
+            <span class="text-bold">
+            {{{item.text}}}
+          </span>
+          {{/if}}
+
+          {{#each item.sections as | section | }}
+            <div class="large-12 {{if (not section.choise) 'pt1'}}">
+              {{#if (and section.choise canChoose)}}
+                {{ui/ui-radio-button label=section.title value=section.title name=item.title classNames="m0 ml1 mr1" onChange="didSelectChoise" checked=(key-value-in-array item.title section.title value)}}
+              {{else}}
+                <h5 class="{{if (not canChoose) 'ml2'}}">{{section.title}}</h5>
+              {{/if}}
+              <div class="{{if section.choise 'ml3'}}">
+                {{section.text}}
+              </div>
+              <hr>
+            </div>
+          {{/each}}
+        </div>
+      {{/if}}
+    {{/if}}
+  </div>

@@ -1,0 +1,11 @@
+<div class="flex-container row no-max" data-equalizer>
+    {{#each grid as | item | }}
+      {{#if item.component}}
+      {{#c-card classNames=item.class item=item block=true canChoose=canChoose}}
+        {{component item.component item=item canChoose=canChoose}}
+      {{/c-card}}
+      {{else}}
+        {{c-card classNames=item.class item=item canChoose=canChoose}}
+      {{/if}}
+    {{/each}}
+</div>

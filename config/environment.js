@@ -6,6 +6,23 @@ module.exports = function(environment) {
     environment: environment,
     rootURL: '/',
     locationType: 'auto',
+    firebase: {
+      apiKey: "AIzaSyCZAsEe-GtUbIuKtPSJ_iOh2_B70COjXj4",
+      authDomain: "ehalsa-8b738.firebaseapp.com",
+      databaseURL: "https://ehalsa-8b738.firebaseio.com",
+      storageBucket: "ehalsa-8b738.appspot.com",
+      messagingSenderId: "647775353536"
+    },
+    torii: {
+      // a 'session' property will be injected on routes and controllers
+      sessionServiceName: 'session',
+      providers: {
+        'facebook-oauth2': {
+          apiKey:      '270603816698940',
+          redirectUri: 'localhost:4000' // default is the current URL
+        }
+      }
+    },
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
@@ -42,9 +59,7 @@ module.exports = function(environment) {
     ENV.APP.rootElement = '#ember-testing';
   }
 
-  if (environment === 'production') {
-
-  }
+  if (environment === 'production') {}
 
   return ENV;
 };

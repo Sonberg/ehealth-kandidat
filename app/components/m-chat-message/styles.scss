@@ -1,0 +1,49 @@
+& {
+  flex-shrink: 1;
+  .message-user {
+    color: grey;
+    margin: 3px 6px;
+    font-size: 0.7em;
+    font-weight: bold;
+  }
+
+  .message-date {
+    color: grey;
+    margin: 3px 10px;
+    font-size: 0.7em;
+    &.image {
+      margin-left: 4em;
+    }
+  }
+
+  .message-image {
+    height: 2em;
+    width: 2em;
+    margin-right: 0.3em;
+    background-position: center;
+    background-size: contain;
+
+    border-radius: 100%;
+  }
+
+  .message-box {
+    border-radius: 16px;
+    color: white;
+    background: grey;
+    display: inline-block;
+    padding: 4px 16px;
+  }
+
+  &.text-right {
+    .message-box {
+      background: #31749e;
+    }
+  }
+
+  .mb1 {
+    margin-bottom: 1em;
+    &.me {
+      margin-bottom: 0.4em;
+    }
+  }
+}

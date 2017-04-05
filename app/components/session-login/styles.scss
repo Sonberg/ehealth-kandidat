@@ -1,0 +1,22 @@
+& {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: auto;
+  padding-left: 260px;
+  color: white;
+
+  .text {
+    font-family: 'Lato'
+  }
+
+  .text-bold {
+    font-weight: bold;
+    margin-top: 0.5em;
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+}

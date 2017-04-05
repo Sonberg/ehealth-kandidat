@@ -1,0 +1,31 @@
+{{#if structure.person.content}}{{#each structure.person.content as | component index | }}
+  <div class="component  large-12" index={{index}}>
+    <div class="top flex flex-justify" {{action "toggle" index}}>
+      <div class="flex flex-center">
+        {{#if component.completed}}
+          {{fa-icon "check mr1"}}
+        {{/if}}
+        {{component.name}}
+      </div>
+      <div class="flex flex-center">
+        {{fa-icon "bars"}}
+        {{fa-icon "chevron-right ml1"}}
+      </div>
+    </div>
+    {{#liquid-if component.open}}
+    <div class="content mb1">
+      <hr>
+      <div class="large-12 flex flex-justify">
+        <div class="flex flex-center">
+          <button class="button alert mb0" {{action "remove" index}}>Ta bort</button>
+        </div>
+        <!--
+        <div class="flex flex-center close" {{action "toggle" index}}>
+          {{fa-icon "chevron-up"}}
+        </div>
+      -->
+      </div>
+    </div>
+    {{/liquid-if}}
+  </div>
+{{/each}}{{/if}}

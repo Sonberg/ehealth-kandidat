@@ -1,0 +1,12 @@
+{{#each components as | component index | }}
+  <div class="component  large-12" data-type={{component.component}} >
+    <div class="top flex flex-justify">
+      <div class="flex flex-center">
+        {{component.name}}
+      </div>
+      <div class="flex flex-center">
+        {{fa-icon "bars"}}
+      </div>
+    </div>
+  </div>
+{{/each}}

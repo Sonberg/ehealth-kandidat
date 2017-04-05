@@ -5,7 +5,21 @@ var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
     // Add options here
+    'ember-cli-tooltipster': {
+      importTooltipsterBorderless:  true,
+    }
   });
+
+  /* Moment.js */
+  app.import('bower_components/moment/moment.js');
+  app.import('bower_components/moment/locale/sv.js');
+  app.import('bower_components/moment/min/moment-with-locales.js');
+
+  app.import('bower_components/jquery-titlealert/jquery.titlealert.js');
+
+  /* Sortable */
+  app.import('bower_components/Sortable/Sortable.min.js');
+
 
   // Use `app.import` to add additional libraries to the generated
   // output files.

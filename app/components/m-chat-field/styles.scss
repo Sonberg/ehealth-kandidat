@@ -1,0 +1,25 @@
+& {
+  position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    border-top: 1px solid #e8e8e8;
+    padding-top: 0.5em;
+
+  input {
+    border: 0 solid;
+    background: white;
+    box-shadow: none;
+    margin-right: 6px;
+    padding: 0 14px;
+    transition: all 0.3s;
+    border-radius: 100px;
+
+    &:focus {
+      box-shadow: none;
+      border: 0 solid;
+      background: #f1f1f1;
+    }
+  }
+}

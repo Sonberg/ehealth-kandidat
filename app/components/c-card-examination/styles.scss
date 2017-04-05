@@ -1,0 +1,51 @@
+& {
+  padding: 1em;
+
+  .card-content {
+    border-radius: 0;
+    padding: 0.5em;
+    border: 2px solid black;
+
+    choose {
+      font-family: "Arial Rounded MT Bold";
+      display: block;
+      margin: 0 auto;
+      text-align: center;
+      padding: 10px 0 0;
+    }
+
+    h3 {
+      text-align: center;
+      font-family: "Core Circus Pierrot3";
+      font-size: 4em;
+    }
+
+    .content {
+      background: #e2e2e2;
+      margin: 0 !important;
+      padding: 1em;
+
+      .image {
+        height: 200px;
+        margin: 0 auto;
+        display: block;
+      }
+    }
+
+    .text {
+      padding: 1em;
+      color: #333333;
+      font-weight: 500;
+      font-size: 0.9em;
+    }
+  }
+
+  .more {
+    text-align: right;
+
+    i {
+      color: #3c3c3c;
+      font-size: 8px;
+    }
+  }
+}

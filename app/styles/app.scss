@@ -1,0 +1,225 @@
+@import url( 'https://fonts.googleapis.com/css?family=Cookie|Nunito|Lato');
+@import "settings";
+@import 'foundation-sites/foundation';
+@include foundation-everything;
+@include foundation-flex-grid;
+@include foundation-flex-classes;
+@import "pod-styles";
+@import "helpers";
+
+h1 {
+  font-family: "Core Circus";
+}
+
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Nunito";
+}
+
+.sub {
+  color: grey;
+}
+
+div,
+p,
+span {
+  //font-family: "Arial Rounded MT Bold"
+}
+
+hr {
+  max-width: 100vh;
+}
+
+.box-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 1000px;
+}
+
+body,
+html {
+  background: #f8f9f9;
+  height: 100%;
+  overflow: hidden;
+}
+
+.content {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+#wrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: auto;
+  padding-left: 280px;
+  padding-right: 1em;
+  transition: all 0.3s;
+  @include breakpoint(small only) {
+    padding-left: 1em;
+  }
+}
+
+.small-hidden {
+  display: block;
+  @include breakpoint(small only) {
+    display: none;
+  }
+}
+
+.small-visible {
+  display: none;
+  @include breakpoint(small only) {
+    display: flex;
+  }
+}
+
+.px2 {
+  padding: 0 2em;
+}
+
+.p2 {
+  padding: 2em;
+}
+
+.pb0 {
+  padding-bottom: 0;
+}
+
+.pr1 {
+  padding-right: 1em;
+}
+
+.mr1 {
+  margin-right: 1em;
+}
+
+.mt1 {
+  margin-top: 1em;
+}
+
+.mt2 {
+  margin-top: 2em;
+}
+
+.mt3 {
+  margin-top: 3em;
+}
+@keyframes strike {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+.strike {
+  position: relative;
+}
+
+.strike:after {
+  content: ' ';
+  position: absolute;
+  top: 45%;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: black;
+  animation-name: strike;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.content {
+  padding-top: 2em;
+  @include breakpoint(small only) {
+    padding-top: 4em;
+  }
+  width: 100%;
+}
+
+.grid {
+  width: 100%;
+  position: fixed;
+  bottom: 8px;
+  left: 0;
+}
+
+.emoji {
+  left: 0;
+  transition: all 0.6s;
+  width: 180px;
+  position: fixed;
+  bottom: 20px;
+}
+
+.active {
+  .link {
+    border-radius: 100px;
+    background: #464646;
+    display: inline-block;
+    color: white;
+    padding: 2px 10px;
+  }
+}
+
+.link {
+  margin-top: 4px;
+}
+
+.heading {
+  display: inline-flex;
+}
+
+.no-max {
+  max-width: none;
+  width: 100%;
+}
+
+.splash {
+  background-image: url('/assets/images/startsida11.png');
+  background-position: top;
+  background-size: cover;
+
+  h1 {
+    color: white;
+    text-align: center;
+  }
+
+  button {
+    font-size: 1.2em;
+    font-family: "Open Sans";
+    font-weight: bold;
+  }
+}
+
+.index-background {
+  background: #99a2b0;
+  background-image: url('/assets/images/index.png');
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  top: 0;
+  left: 260px;
+  right: 0;
+  bottom: 0;
+}
+
+
+.index {
+  position: relative;
+    height: 100vh;
+}

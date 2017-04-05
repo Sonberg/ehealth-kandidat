@@ -1,0 +1,11 @@
+<div class="button-float {{if open 'open'}}" {{ action "toggle" }}>
+  {{#if open}}
+    {{fa-icon "arrow-right"}}
+  {{else}}
+    {{#if (gt messages.length 0)}}
+      <div class="badge badge-large">
+        {{messages.length}}
+      </div>
+    {{/if}}
+  {{/if}}
+</div>

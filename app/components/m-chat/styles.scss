@@ -1,0 +1,59 @@
+& {
+  height: 0px;
+  width: 0px;
+  padding-bottom: 140px;
+  transition: all 0s;
+  max-width: 100vw;
+
+  &.open {
+    height: 99vh;
+    width: 400px;
+  }
+
+  h5 {
+    margin-bottom: 0;
+    font-family: "Arial Rounded MT Bold"
+  }
+
+  .chat-user {
+    border-bottom: 1px solid #e8e8e8;
+    padding: 8px;
+
+    .user-image {
+      position: relative;
+      width: 60px;
+      height: 60px;
+      border-radius: 100px;
+      background: grey;
+      background-image: url("maria.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      .online {
+        height: 12px;
+        width: 12px;
+        color: green;
+        border-radius: 100%;
+        position: absolute;
+        top: 0px;
+        right: 0px;
+      }
+    }
+
+    .user-info {
+      margin-top: 4px;
+      margin-left: 12px;
+    }
+  }
+
+  .messages-box {
+      overflow-y: scroll;
+      overflow-x: hidden;
+      max-height: 100vh;
+      padding: 12px;
+      height: 100%;
+      @include breakpoint(small only) {
+        padding-bottom: 4em;
+      }
+  }
+}

@@ -1,0 +1,13 @@
+& {
+  input {
+    border: 0 solid;
+    background: #d0d0d0;
+    box-shadow: none;
+
+    &:focus {
+      box-shadow: none;
+      background: #efefef;
+      border: 0 solid;
+    }
+  }
+}

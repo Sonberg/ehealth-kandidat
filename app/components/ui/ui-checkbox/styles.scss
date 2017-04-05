@@ -1,0 +1,72 @@
+$background: #4da95d;
+$checkbox-color: black;
+$checkbox-check-color: $background;
+
+.checkbox,
+[class*=" checkbox"] {
+  width: 34px;
+  display: inline-block;
+  margin: 1em 8px 0px;
+  margin-right: 1em;
+
+  > input {
+    display: none;
+
+    &:checked {
+      + label {
+        background: white;
+
+        &::before {
+          transform: rotate(-40deg) translatex(-3px) translatey(14px);
+          -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+        }
+
+        &::after {
+          transform: rotate(38deg) translatex(-4px) translatey(8px);
+          -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+        }
+      }
+    }
+  }
+
+  > label {
+    position: relative;
+    display: block;
+    width: 30px;
+    height: 30px;
+    border: 2px solid $checkbox-color;
+    overflow: hidden;
+    transition: transform 0.5s ease-in-out, background 0.125s ease-in-out;
+    text-align: left;
+    user-select: none;
+
+    &:hover {
+      background: rgba(255,255,255, .25);
+      cursor: pointer;
+    }
+
+    &::after,
+    &::before {
+      content: '';
+      position: absolute;
+      border-left: 3px solid $checkbox-check-color;
+      transition: all 0.25s ease-in-out;
+      transform-origin: center center;
+      width: 0;
+      border-radius: 3px;
+    }
+
+    &::before {
+      transform: rotate(-30deg) translatex(0) translatey(-10px);
+      height: 10px;
+    }
+
+    &::after {
+      transform: rotate(30deg) translatex(0) translatey(-20px);
+      height: 20px;
+      right: 0;
+    }
+  }
+}

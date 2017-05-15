@@ -29,14 +29,14 @@
   .message-box {
     border-radius: 16px;
     color: white;
-    background: grey;
+    background: #9e5a6f;
     display: inline-block;
     padding: 4px 16px;
   }
 
   &.text-right {
     .message-box {
-      background: #31749e;
+      background: #3a1bca;
     }
   }
 

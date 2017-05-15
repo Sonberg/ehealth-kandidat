@@ -45,6 +45,7 @@ $checkbox-check-color: $background;
     &:hover {
       background: rgba(255,255,255, .25);
       cursor: pointer;
+      box-shadow: 2px 4px 3px #888888;
     }
 
     &::after,

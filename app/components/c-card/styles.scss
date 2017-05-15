@@ -36,8 +36,10 @@
     background-repeat: no-repeat;
     transition: all 0.3s;
 
-    &:hover {
-      box-shadow: 0 0 18px 0 rgba(0, 0, 0, 0.3);
+    &.no-border {
+      box-shadow: none;
+      background: none;
+      padding: 0;
     }
 
     .float {
@@ -131,5 +133,19 @@
         display: none;
       }
     }
+  }
+
+  .toggle {
+    font-weight: bold;
+    margin-top: 4px;
+    background: #949494;
+    color: white;
+    * {
+      margin: 5px 10px;
+
+    }
+  }
+  hr {
+    margin: 0.75rem auto;
   }
 }

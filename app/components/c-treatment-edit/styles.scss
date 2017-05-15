@@ -29,9 +29,15 @@
     padding: 0.5em 1em;
     margin: 0;
     display: inline-flex;
-    background: #40a076;
+    background: #9340a0;
     color: white;
     font-weight: bold;
+
+  }
+
+  .component {
+    margin: 0.3em 0;
+    width: 100%;
 
     &:first-child {
       margin-top: 0;
@@ -40,11 +46,6 @@
     &:last-child {
       margin-bottom: 0;
     }
-  }
-
-  .component {
-    margin: 0.3em 0;
-    width: 100%;
 
     &:first-child {
       .top {

@@ -2,33 +2,16 @@
   <li class="">
     {{#link-to "index" tagname="li" classNames="header" }}Behandlings<br>resan{{/link-to}}
   </li>
-  <li class="sub pl15">Före diagnos</li>
   <li>
     {{#link-to "prevent"}}Förebyggande{{/link-to}}
   </li>
-  <li>
-    {{#link-to "examination"}}Symtom{{/link-to}}
-  </li>
-  <li class="text-white pl15" {{action "toggleMoment"}}>
-    <div class="flex flex-justify flex-center">
-      Behandlingsmoment
-      {{#liquid-if momentOpen}}
-        {{fa-icon "chevron-down mr1"}}
-        {{else}}
-        {{fa-icon "chevron-right mr1"}}
-      {{/liquid-if}}
-    </div>
-  </li>
-  {{#liquid-if momentOpen}}
-    <li>{{#link-to "cellgift" class="pl3"}}Cellgift{{/link-to}}</li>
-    <li>{{#link-to "magnetrontgen" class="pl3"}}Magnetröntgen{{/link-to}}</li>
-    <li>{{#link-to "stralning" class="pl3"}}Strålbehandling{{/link-to}}</li>
-    <li>{{#link-to "operation" class="pl3"}}Operation{{/link-to}}</li>
-  {{/liquid-if}}
-  <li class="sub pl15 pt1">Under behandlingen</li>
   <li {{ action "toggleTimeline"}}>
     {{#link-to "edit"}}
-      Din behandling
+    {{#if (gt structure.person.content.length 0) }}
+        Min behandling
+      {{else}}
+        Återskapa din behandlingsplan
+      {{/if}}
       {{#if (gt structure.person.content.length 0) }}
         {{fa-icon "pencil-square-o pull-right"}}
       {{/if}}
@@ -39,5 +22,12 @@
   <div class="timeline">
     {{c-timeline setActive="setActive" }}
   </div>
+{{else}}
+<div class="timeline">
+<div class="instruction">
+  <img src="/assets/images/noun_890450_cc.png" class="arrow" alt="">
+Återskapa behandlingsplanen som du har blivit tilldelad av din läkare
+</div>
+</div>
 {{/liquid-if}}
 {{c-user-card}}

@@ -9,15 +9,20 @@
       </div>
       <div class="flex flex-center">
         {{fa-icon "bars"}}
-        {{fa-icon "chevron-right ml1"}}
       </div>
     </div>
     {{#liquid-if component.open}}
     <div class="content mb1">
-      <hr>
       <div class="large-12 flex flex-justify">
         <div class="flex flex-center">
           <button class="button alert mb0" {{action "remove" index}}>Ta bort</button>
+          <button class="button primary mb0 ml1" {{action "complete" index}}>
+            {{#if component.completed}}
+              Avmarkera som slutfört
+            {{else}}
+              Markera som slutfört
+            {{/if}}
+          </button>
         </div>
         <!--
         <div class="flex flex-center close" {{action "toggle" index}}>

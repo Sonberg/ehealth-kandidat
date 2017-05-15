@@ -1,5 +1,5 @@
 
-  <div class="card-content" style= {{style}}>
+  <div class="{{if item.noBorder 'no-border'}} card-content" style= {{style}}>
     {{#if block}}
       {{yield}}
     {{else}}
@@ -21,6 +21,9 @@
           </div>
         {{/if}}
       </div>
+
+      {{#liquid-if open}}
+
       {{#if (or item.text item.sections)}}
         <div class="text row">
           {{#if item.text}}
@@ -30,19 +33,23 @@
           {{/if}}
 
           {{#each item.sections as | section | }}
-            <div class="large-12 {{if (not section.choise) 'pt1'}}">
-              {{#if (and section.choise canChoose)}}
-                {{ui/ui-radio-button label=section.title value=section.title name=item.title classNames="m0 ml1 mr1" onChange="didSelectChoise" checked=(key-value-in-array item.title section.title value)}}
-              {{else}}
-                <h5 class="{{if (not canChoose) 'ml2'}}">{{section.title}}</h5>
-              {{/if}}
-              <div class="{{if section.choise 'ml3'}}">
-                {{section.text}}
-              </div>
-              <hr>
-            </div>
+            {{c-card-accordion-item section=section canChoose=canChoose}}
           {{/each}}
         </div>
       {{/if}}
+      {{/liquid-if}}
+
+      <div {{action "toggle"}} class="flex align-center toggle">
+        {{#if open}}
+        {{fa-icon "angle-double-up"}}
+          Dölj
+        {{fa-icon "angle-double-up"}}
+        {{else}}
+        {{fa-icon "angle-double-down"}}
+          Läs mer
+        {{fa-icon "angle-double-down"}}
+        {{/if}}
+      </div>
+
     {{/if}}
   </div>

@@ -16,6 +16,7 @@ export default Ember.Component.extend({
       image: null,
       component: 'c-treatment-blueprint',
       class: "large-4 medium-4 small-12",
+      noBorder: true
     }
   ]),
   data: Ember.computed("structure.person.content", function () {

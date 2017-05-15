@@ -31,14 +31,14 @@
   }
 
   li {
-    font-family: "Arial Rounded MT Bold";
+    font-family: "Lato";
     display: grid;
 
     a {
       color: white;
       padding: 0.8rem 1rem;
       &.active {
-        background: #40a076;
+        background: #9340a0;
       }
     }
   }
@@ -46,18 +46,41 @@
   .header {
     font-family: "lato";
     font-size: 2em;
-    color: white;
+    background: -webkit-linear-gradient(to right, #c35769, #c32eda);
+    background: linear-gradient(to right, #c35769, #c32eda);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-weight: 900;
     text-align: left;
     padding: .4em 0.6em;
     margin:  1em 0 2.2em;
-    &.active {
-      background: none;
+    transition: all 1s;
+
+    &:hover {
+      background: -webkit-linear-gradient(to right, #c35769, #c32eda);
+      background: linear-gradient(to right, #c35769, #c32eda);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
   }
 
   .timeline {
-    background: #74c7a3;
-    border-top: 2px solid #40a076;
+    background: #6d6e71;
+    //border-top: 2px solid #40a076;
+    color: white;
+  }
+
+  .instruction {
+    font-family: "Nunito";
+    color: #d8d8d8;
+    font-size: 1.1em;
+    padding-top: 1em;
+    padding-bottom: 2em;
+    text-align: center;
+
+    .arrow {
+      display: block;
+      margin: 0 auto 1em;
+    }
   }
 }

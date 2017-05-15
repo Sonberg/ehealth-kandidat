@@ -7,6 +7,7 @@ export default Ember.Component.extend({
   classNames: ['flip'],
   attributeBindings: ['data-equalizer-watch'],
   "data-equalizer-watch": true,
+  open: false,
 
 
   value: function () {
@@ -20,6 +21,9 @@ export default Ember.Component.extend({
     }
   }),
   actions: {
+    toggle: function () {
+      this.toggleProperty('open');
+    },
     didSelectChoise: function (name, value) {
       var data = this.get("structure.person.content." + this.get("structure.active") + ".value");
       var select = {'name' : name, 'value' : value};

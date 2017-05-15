@@ -2,6 +2,6 @@
   {{#if canChoose}}
   {{ui/ui-checkbox checked=data.completed didChangeCheckbox="didChangeCheckbox"}}
   {{/if}}
-  <h1>Magnetröntgen</h1>
+  <h1 class={{if data.completed 'strike'}}>Magnetröntgen</h1>
 </div>
 {{c-onboard-content grid=grid canChoose=canChoose}}

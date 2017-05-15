@@ -34,16 +34,17 @@ export default Ember.Component.extend({
         animation: 200,
         onEnd: function(evt) {
           self.set("structure.content", JSON.parse(JSON.stringify(self.get("structure.person.content").move(evt.oldIndex, evt.newIndex))));
+          self.get("structure.person").save();
         },
         onSort: function(evt) {
           var component = rules.byComponent(Ember.$(evt.item).attr("data-type"));
-          if (component) {
+          if (component && evt.from != evt.to) {
             if (!self.get("structure.person.content")) {
               self.set("structure.person.content", Ember.A());
             }
             self.get("structure.person.content").insertAt(evt.newIndex, component);
-            Ember.$(evt.item).remove();
           }
+          Ember.$(evt.item).remove();
           return true;
         }
       });
@@ -59,6 +60,9 @@ export default Ember.Component.extend({
     },
     remove: function (index) {
       this.get("structure.person.content").removeObject(this.get("structure.person.content." + index));
+    },
+    complete: function (index) {
+      this.set("structure.person.content." + index + ".completed", !this.get("structure.person.content." + index + ".completed"))
     }
   }
 });

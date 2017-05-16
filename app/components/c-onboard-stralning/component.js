@@ -63,6 +63,30 @@ grid: Ember.A([
     image: "../../assets/images/hotell.png",
     class: "large-6",
     text: "I Lund finns det hotell för patienter där du kan övernatta",
+  },{
+    title: "Egenvård",
+    class: "large-6",
+    image: "../../assets/images/rehab.png",
+    text: "Detta är åtgärder som du kan göra själv och tänka på, före, och efter behandlingen",
+    sections: [{
+      title: "Före behandlingen",
+      text: "Detta är bra att tänka på",
+      sections: [{
+        title: "Röra på dig",
+        text: "En promenad varje dag"
+      },
+      {
+        title: "Mat",
+        text: "Ät näringsnyttig mat"
+      }]
+    },{
+      title: "Efter behandlingen",
+      text: "Detta är bra att tänka på",
+      sections: [{
+        title: "Röra på dig",
+        text: "En promenad varje dag"
+      }]
+    }]
   }
 ]),
  actions: {

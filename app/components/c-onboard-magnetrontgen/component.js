@@ -54,7 +54,31 @@ export default Ember.Component.extend({
          choise: true
        },
      ]
-   },
+   },{
+     title: "Egenvård",
+     class: "large-6",
+     image: "../../assets/images/rehab.png",
+     text: "Detta är åtgärder som du kan göra själv och tänka på, före, och efter behandlingen",
+     sections: [{
+       title: "Före behandlingen",
+       text: "Detta är bra att tänka på",
+       sections: [{
+         title: "Röra på dig",
+         text: "En promenad varje dag"
+       },
+       {
+         title: "Mat",
+         text: "Ät näringsnyttig mat"
+       }]
+     },{
+       title: "Efter behandlingen",
+       text: "Detta är bra att tänka på",
+       sections: [{
+         title: "Röra på dig",
+         text: "En promenad varje dag"
+       }]
+     }]
+   }
   ]),
   actions: {
     didChangeCheckbox: function() {

@@ -32,9 +32,11 @@
           </span>
           {{/if}}
 
-          {{#each item.sections as | section | }}
-            {{c-card-accordion-item section=section canChoose=canChoose}}
-          {{/each}}
+          <div class="sections">
+            {{#each item.sections as | section | }}
+              {{c-card-accordion-item item=item section=section canChoose=canChoose value=value}}
+            {{/each}}
+          </div>
         </div>
       {{/if}}
       {{/liquid-if}}

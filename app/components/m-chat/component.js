@@ -4,6 +4,7 @@ export default Ember.Component.extend({
   session: Ember.inject.service(),
   messages: Ember.A,
   classNameBindings: ["open"],
+  open: false,
   maria: {
       user: "Maria",
       text: "Hej, jag heter Maria och kommer vara din kontaktperson här på Behandlingsresan. Finns det något jag kan hjälpa dig med? ",
@@ -34,5 +35,13 @@ export default Ember.Component.extend({
       }
 
     }.bind(this));
-  }.on("didInsertElement").observes("messages.@each")
+  }.on("didInsertElement").observes("messages.@each"),
+
+  outsideClick: function () {
+      Ember.$(document).on('click', function (evt) {
+        if (!Ember.$.contains(this.element, evt.target) && Ember.$(evt.target).attr('data-ember-action') == undefined) {
+          this.set('open', false);
+        }
+      }.bind(this))
+  }.on("didInsertElement")
 });

@@ -18,6 +18,11 @@
     }
   }
 
+  .fa-angle-down,
+  .fa-angle-right {
+    font-size: 1.8em;
+  }
+
   .text-bold {
     font-weight: 500;
   }
@@ -138,14 +143,28 @@
   .toggle {
     font-weight: bold;
     margin-top: 4px;
-    background: #949494;
+    padding: 0.2em;
+    background: #bbbbbb;
     color: white;
+
     * {
       margin: 5px 10px;
-
     }
   }
+
   hr {
     margin: 0.75rem auto;
+  }
+
+  .sections {
+    width: 100%;
+
+    > div:nth-child(odd) {
+
+    }
+
+    > div:nth-child(even) {
+
+    }
   }
 }

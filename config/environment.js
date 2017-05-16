@@ -59,7 +59,12 @@ module.exports = function(environment) {
     ENV.APP.rootElement = '#ember-testing';
   }
 
-  if (environment === 'production') {}
+  if (environment === 'production') {
+    ENV.locationType = 'hash';
+    ENV.rootURL = '/ehealth-kandidat/';
+    EVN.APP.torii.providers['facebook-oauth2'].redirectUri = 'https://sonberg.github.io/ehealth-kandidat'
+
+  }
 
   return ENV;
 };

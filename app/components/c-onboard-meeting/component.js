@@ -8,13 +8,13 @@ data: Ember.computed("structure.person.content", function () {
 grid: Ember.A([
   {
     title: "Möte",
-    image: "../../assets/images/mote.png",
+    image: "assets/images/mote.png",
     class: "large-12",
     text: null,
     sections: null
   }, {
     title: "Plats",
-    image: "../../assets/images/plats.png",
+    image: "assets/images/plats.png",
     class: "large-6",
     text: null,
     sections: [
@@ -36,13 +36,13 @@ grid: Ember.A([
     ]
   }, {
     title: "Resa",
-    image: "../../assets/images/resa.png",
+    image: "assets/images/resa.png",
     class: "large-6",
     text: "Vero chia cornhole, deep v seitan tumblr semiotics selfies biodiesel poutine letterpress deserunt",
     sections: "Jag vill göra min behandling i"
   }, {
     title: "Boende",
-    image: "../../assets/images/hotell.png",
+    image: "assets/images/hotell.png",
     class: "large-6",
     text: "Vero chia cornhole, deep v seitan tumblr semiotics selfies biodiesel poutine letterpress deserunt",
     sections: null

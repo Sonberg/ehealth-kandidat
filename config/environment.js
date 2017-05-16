@@ -62,7 +62,7 @@ module.exports = function(environment) {
   if (environment === 'production') {
     ENV.locationType = 'hash';
     ENV.rootURL = '/ehealth-kandidat/';
-    ENV.torii.providers['facebook-oauth2'].redirectUri = 'https://sonberg.github.io/ehealth-kandidat'
+    ENV.torii.providers['facebook-oauth2'].redirectUri = 'sonberg.github.io/ehealth-kandidat'
 
   }
 

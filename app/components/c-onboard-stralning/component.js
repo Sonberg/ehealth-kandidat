@@ -9,14 +9,14 @@ data: Ember.computed("structure.person.content", function () {
 grid: Ember.A([
   {
     title: "Strålning",
-    image: "../../assets/images/stralbehandling.png",
+    image: "assets/images/stralbehandling.png",
     class: "large-6",
     text: "Strålbehandling började användas för behandling av cancer redan i slutet av 1800-talet. Sedan dess har metoderna naturligtvis utvecklats mycket. Ny utrustning med bland annat högre energi ger effektivare behandling med mindre biverkningar. <br><br> I dag står strålbehandlingen för 30 procent av all bot mot cancer och hälften av alla cancerpatienter får någon gång strålbehandling. Det kan röra sig om så kallad extern strålbehandling, där strålkällan finns utanför kroppen, eller brakyterapi, där strålkällan placeras invid eller i tumören.  Strålbehandling kan kombineras med cytostatika, hormonbehandling eller annan medicinsk behandling. <br> <br>Strålbehandling kan ges för att bota en cancersjukdom. Man talar då om kurativ behandling. Strålbehandling kan också ges för att lindra en obotlig cancersjukdom. Då säger man att behandlingen är palliativ. ",
     choise: null
   }, {
     title: "Plats",
     class: "large-6",
-    image: "../../assets/images/plats.png",
+    image: "assets/images/plats.png",
     choise: "Jag vill göra min behandling i",
     text: "I Halmstad finns det inte utrustning för att genomföra denna behandlingen, detta är platserna där du kan välja <br><br>",
     sections: [
@@ -41,7 +41,7 @@ grid: Ember.A([
   }, {
    title: "Resa",
    class: "large-6",
-   image: "../../assets/images/resa.png",
+   image: "assets/images/resa.png",
    choise: "Jag vill göra min behandling i",
    text: "Patienten kan själv ta tåget till platsen. Ersättning betalas ut mot upvisning av kvitton <br><br>",
    sections: [
@@ -60,13 +60,13 @@ grid: Ember.A([
    ]
  }, {
     title: "Boende",
-    image: "../../assets/images/hotell.png",
+    image: "assets/images/hotell.png",
     class: "large-6",
     text: "I Lund finns det hotell för patienter där du kan övernatta",
   },{
     title: "Egenvård",
     class: "large-6",
-    image: "../../assets/images/rehab.png",
+    image: "assets/images/rehab.png",
     text: "Detta är åtgärder som du kan göra själv och tänka på, före, och efter behandlingen",
     sections: [{
       title: "Före behandlingen",

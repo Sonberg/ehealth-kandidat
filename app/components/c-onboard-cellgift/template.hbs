@@ -1,8 +1,0 @@
-<div class="heading">
-  {{#if canChoose}}
-    {{ui/ui-checkbox checked=data.completed didChangeCheckbox="didChangeCheckbox"}}
-  {{/if}}
-  <h1 class={{if data.completed 'strike'}}>Cellgift</h1>
-</div>
-
-{{c-onboard-content grid=grid canChoose=canChoose}}

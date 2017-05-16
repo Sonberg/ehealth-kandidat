@@ -4,7 +4,7 @@ export default Ember.Controller.extend({
   grid: Ember.A([
     {
       title: "Rådgivning",
-      image: "/assets/images/radgivning.png",
+      image: "assets/images/radgivning.png",
       class: "large-6 medium-6 small-12",
       text: "Anette Karlsson är hälsokoordinator vid livsstilsmottagningen på Emmaboda hälsocentral. Hon träffar personer som vill ha hjälp med att förändra sin livsstil. Jag möter både unga personer och gamla. Det är aldrig för sent att sluta röka, ändra sin kost eller att börja röra på sig men alla har olika förutsättningar. Jag anpassar rådgivningen till den jag har framför mig, säger Anette Karlsson. Hon inleder mötet med ett hälsosamtal om personens levnadsvanor. Därefter hjälper Anette till med att sätta upp mål, vilket är viktigt för att kunna göra en förändring. Utan mål faller det. Personen måste veta vad den strävar mot. Det är bra att börja med små förändringar. Det kan vara jobbigt i början men när personen sedan nått sitt mål mår den oftast bättre och då är det lättare att hålla kvar de goda vanorna.",
       sections: [
@@ -24,7 +24,7 @@ export default Ember.Controller.extend({
     },
     {
       title: "Rökning",
-      image: "/assets/images/rokforbud.png",
+      image: "assets/images/rokforbud.png",
       class: "large-6 medium-6 small-12",
       text: "Det finns flera goda anledningar att sluta röka inför en operation. När man röker får kroppens vävnader mindre syre, vilket gör att operationssåret läker långsammare än normalt. Det ökar risken för att få en infektion i såret. Om man är rökfri åtta veckor före och håller upp lika lång tid efter operationen kan risken för komplikationer halveras.",
       sections: [
@@ -38,7 +38,7 @@ export default Ember.Controller.extend({
       ]
     }, {
       title: "Alkohol",
-      image: "/assets/images/alkohol.png",
+      image: "assets/images/alkohol.png",
       class: "large-6 medium-6 small-12",
       text: "Alkoholberoende är vanligt. Alkoholvanor och risken att utveckla ett beroende kan påverkas av olika saker. Till exempel hur du har det omkring dig, hur du mår och av ärftlighet. Det går inte att säga hur lång tid och hur mycket du måste ha druckit för att utveckla ett beroende.",
       sections: [
@@ -56,7 +56,7 @@ export default Ember.Controller.extend({
     },
     {
       title: "Kostvanor",
-      image: "/assets/images/matvanor.png",
+      image: "assets/images/matvanor.png",
       class: "large-6 medium-6 small-12",
       sections: [
         {
@@ -76,7 +76,7 @@ export default Ember.Controller.extend({
     },
     {
       title: "Träning",
-      image: "/assets/images/rehab.png",
+      image: "assets/images/rehab.png",
       class: "large-6 medium-6 small-12",
       text: "Du kan själv påverka din hälsa genom aktiva val, så som att äta hälsosamt, motionera regelbundet och inte röka eller snusa. Vidare påverkar dina alkoholvanor hur du mår, men även stress och sömn är avgörande för att du ska uppleva en god hälsa. En liten förändring av dina levnadsvanor kan ha positiv effekt på din hälsa och minska riskerna för att du ska bli sjuk.",
       sections: [
